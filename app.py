@@ -25,6 +25,8 @@ def pozdrav_post():
 	message_name2 = None
 	if not name or not surname:
 		message_name1 = "ERROR: Zadej jméno a příjmení."
+		name = None
+		surname = None
 	elif len(name) > 50 or len(surname) > 50:
 		message_name2 = "ERROR: Jméno a příjmení musí mít maximálně 50 znaků."
 		name = None
