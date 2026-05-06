@@ -20,8 +20,17 @@ def pozdrav_post():
 
 	name=request.form.get("name")
 	surname=request.form.get("surname")
-
-	return render_template("pozdrav_post.html", date=date, name=name, surname=surname)
+	password=request.form.get("password")
+	heslo = "SPRAVNE_HESLO"
+	message = None
+	
+	if not password:
+		message=None
+	elif password == heslo:
+		message = "Správné heslo!"
+	else:
+		message = "ERROR: Chybné heslo!"
+	return render_template("pozdrav_post.html", date=date, name=name, surname=surname, message=message)
 	
 
 if __name__=="__main__":
