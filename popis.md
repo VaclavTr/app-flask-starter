@@ -1,0 +1,3 @@
+Aplikace umí zobrazit pozdrav se jménem a příjmením (GET) a na stránce pozdrav-post zpracovat formulář metodou POST včetně kontroly prázdných vstupů, délky textu a hesla.
+Projekt je připravený jak pro lokální spuštění (python app.py), tak pro nasazení na Render pomocí gunicorn.
+Často jsem měl problémy s drobnými nedostatky, kvůli kterým kód nebyl správně napsán (např. jsem v returnu fce zapomněl vypsat jednotlivé message), ale díky Agent review jsem problém lehce vyřešil.
